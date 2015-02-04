@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<title>
+	This is assignment 2 javascript
+</title>
+</head>
+<body>
+	<p id="list"> </p>
+<script>
+var text = "";
+	var student = [
+	{"id":1,"fname":"Ram","lname":"Sharma","age":25},
+	{"id":2,"fname":"shyam","lname":"Sharma","age":34},
+	{"id":3,"fname":"guru","lname": "Sharma","age":67}
+	];
+	
+ for(var i=0 ; i < student.length ; i++) {
+	text += student[i].id + "<br/>" + student[i].fname + "<br/>" + student[i].lname + "<br/>" + student[i].age + "<br/>" ;
+}
+	document.getElementById("list").innerHTML = text;
+</script>
+
+</body>
+</html>

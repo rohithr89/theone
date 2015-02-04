@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Webpage to take RGB input and display the hex value
+	and change the color to the corresponding Hex color 
+	using javascript-->
+<html>
+	<title>
+		RGB assignemnt
+	</title>
+<style>
+	#color {
+		width: 100%;
+		height:300px;
+	}
+</style>
+<body>
+<form enctype="multipart/form-data" title="rgb form">
+Red <input type="text" id="red" name="red"/><br />
+green <input type="text" id="green" name="green"/><br />
+blue <input type="text" id="blue" name="blue" /><br />
+<input type="button" onclick="toHex()" value="Calculate"/>		
+</form>	
+<div id="color">
+</div>
+<script>
+function componentToHex(c) {
+    return c.length == 1 ? "0" + c : c;
+}
+function toHex(){
+	
+	// Initialilization with literals
+	var color = {
+		"red": document.getElementById('red').value
+	}; 
+	var blueC = document.getElementById('blue').value;
+	// Initialization with constructor function
+	color.blue = new Number(blueC);
+	// Initialization with Oject definition
+function checkRange(num) {
+	if(num <0 || num>255 || isNaN(num)){
+		return true;
+	}
+	return false;
+}	
+var color1 = Object.create(color,{green:{value:document.getElementById('green').value}});
+if(checkRange(color1.red)){
+	alert("Enter a valid number for RED");
+	return;
+}
+if(checkRange(color1.green)){
+	alert("Enter a valid number for GREEN");
+	return;
+}
+if(checkRange(color1.blue)){
+	alert("Enter a valid number for BLUE");
+	return;
+}
+var rgb = "#" + componentToHex(parseInt(color1.red,10).toString(16)) +  componentToHex(parseInt(color1.green,10).toString(16)) + componentToHex(parseInt(color1.blue,10).toString(16)) ;
+var node = document.createTextNode(rgb);
+document.getElementById('color').appendChild(node);
+console.log(rgb);
+document.getElementById("color").style.color = rgb;
+}		
+	</script>
+</body>	
+	
+</html>
