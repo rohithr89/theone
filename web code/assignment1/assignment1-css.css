@@ -1,0 +1,71 @@
+body {
+	background-image: url(bg.jpg);
+	background-size: 200%;
+	margin: 75px;
+	
+}
+#header {
+    background-color:#0099FF;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+#footer {
+    background-color:#0099FF;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:10px;	 	 
+}
+nav {	
+	background-color: #0099FF ;
+	text-align:right;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+   }
+#paragraph {  
+	width: 50%; 
+	float:left;
+	height: 300px; 
+	background-color: #1D72EF;
+	color: white;
+}
+.imageClass{
+	background-color: grey;
+	width:33%;
+	height:300px;
+	float:left;
+	
+}
+
+.imageClass img {
+	width: 100%;
+	height: 300px;
+}
+.mainImage img {
+	width:50%;
+	height:300px;
+	float:right;
+}
+.imageClass img:hover {
+	
+	opacity: 0.1;
+}
+table, th, td {
+	width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+    color: white;
+}
+.od {
+	background-color: grey;
+	color: red;
+}
+nav a:hover {
+	color: pink;
+}
